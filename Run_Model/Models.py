@@ -38,7 +38,6 @@ def load_model(json_name, h5_name):
                          metrics=['accuracy'])
     return loaded_model
 
-
 def evaluations_table(model, pred_x=[], true_y=[]):
     """
     :param model: The model that we are using to make predictions
@@ -66,7 +65,6 @@ def evaluations_table(model, pred_x=[], true_y=[]):
                 test_my_eval_df[name][i] = test_temp[(j, i)]
     return test_my_eval_df # classification report AND contingency table
 
-
 def predict_one_image(model, image, labels_string=["bacterial","covid","healthy"]):
     img = mpimg.imread(image) #
     # example:'images_directory/covid/gr2_lrg-c.png')
@@ -90,26 +88,6 @@ def predict_one_image(model, image, labels_string=["bacterial","covid","healthy"
         return labels_string[indd]
     else:
         return "Error: wrong image shape"
-
-
-
-# converts to numpy dataframe so we can just get the images or the labels
-def get_k_splits(train_dsu):
-# converts to numpy dataframe s
-    all_images = []
-    all_labels = []
-    for image, label in train_dsu.take(-1):
-        all_images.append(image.numpy())
-        all_labels.append(int(label))
-    all_images = np.array(all_images)
-    all_labels = np.array(all_labels)
-    print("done")
-    return (all_images, all_labels)  # , skf, fold_inds)
-
-
-
-#/Users/Vivian/Documents/GitHub/COVID-19-X-ray-Classifier/Colab Notebooks/covid-chestxray-dataset-master/COVID19_images/
-
 
 if __name__ == "__main__":
     my_dir = os.getcwd()
