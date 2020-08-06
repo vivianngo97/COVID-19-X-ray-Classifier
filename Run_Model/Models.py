@@ -1,9 +1,10 @@
 # This is code to run the models
-
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras import layers
-#from tensorflow.keras.layers.experimental import preprocessing
+# from tensorflow.keras import layers
+# from tensorflow.keras.layers.experimental import preprocessing
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import numpy as np
@@ -23,7 +24,7 @@ def load_model(json_name, h5_name):
     :return: loaded_model
     :rtype: tensorflow model
     """
-    print(time.strftime("%Y%m%d-%H%M%S") + "loading model")
+    print(time.strftime("%Y%m%d-%H%M%S") + " loading model")
     json_file = open(json_name, 'r')
     loaded_model_json = json_file.read()
     json_file.close()
@@ -111,10 +112,22 @@ def get_k_splits(train_dsu):
 
 
 if __name__ == "__main__":
-    loaded_model = load_model(
-        "Colab Notebooks//covid-chestxray-dataset-master//COVID19_images//model_P6SMOTEfinal.json",
-        "Colab Notebooks//covid-chestxray-dataset-master//COVID19_images//model_P6SMOTEfinal.h5")
-
-    predict_one_image(loaded_model, "Colab Notebooks//covid-chestxray-dataset-master//COVID19_images//images_directory//bacterial//person1_bacteria_2.jpeg")
-
+    my_dir = os.getcwd()
+    loaded_model = load_model(my_dir + "/model_P6SMOTEfinal.json", my_dir + "/model_P6SMOTEfinal.h5")
+    while True:
+        print("\n Here are the possible files to pick from:")
+        my_listdir = os.listdir(my_dir + "/Sample_Images")
+        print(my_listdir)
+        try:
+            ans = input("\n Please enter the file name of your image of interest (please include extension):")
+            my_index = my_listdir.index(ans)
+        except:
+            print("\n -------------------- \n Sorry! We could not find this image. Please try again.")
+        else:
+            my_prediction = predict_one_image(loaded_model, my_dir + "/Sample_Images/" + ans)
+            print("\n ~~~~~~ Our prediction is: ", my_prediction, " ~~~~~~")
+            cont = input("\n \n Would you like to play again? If yes, type y or Y:")
+            if cont != "y" and cont != "Y":
+                print ("\n Have a nice day!")
+                break
 
