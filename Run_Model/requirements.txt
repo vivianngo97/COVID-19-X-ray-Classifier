@@ -187,6 +187,7 @@ pytest-remotedata==0.3.2
 python-dateutil==2.8.1
 python-jsonrpc-server==0.3.4
 python-language-server==0.31.7
+python-resize-image==1.1.19
 python-utils==2.4.0
 pytz==2019.3
 PyWavelets==1.1.1
