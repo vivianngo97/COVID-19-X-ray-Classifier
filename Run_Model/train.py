@@ -213,6 +213,5 @@ temp = pd.DataFrame(list(zip(acc_per_fold, loss_per_fold)),
 temp.loc['mean'] = temp.mean()
 print(temp)
 temp.to_csv(modelname + '.csv', index=True)
-del temp
 
 
