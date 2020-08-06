@@ -15,15 +15,15 @@ To test out this punctuation restoration model, you just need to run [__Models.p
 - You can now test out the model by following the prompts!
 - You will see something like this: 
 
-<pre><code>>>>Here are the possible files to pick from:
+<pre><code>>>> Here are the possible files to pick from:
 ['healthy4.jpeg', 'bac2.jpeg', 'bac3.jpeg', 'healthy2.jpeg', 'bac4.jpeg', 'healthy3.jpeg', 'healthy1.jpeg', 'covid4.png', 'covid1.jpg', 'bac1.jpeg', 'covid3.png', 'covid2.png'] 
 
->>>Please enter the file name of your image of interest (please include extension):
+>>> Please enter the file name of your image of interest (please include extension):
 
->>>Puntuation_Transcription> ~~~~~~ Our prediction is:  <>  ~~~~~~
+>>> ~~~~~~ Our prediction is:  <>  ~~~~~~
 
->>>Would you like to play again? If yes, type y or Y:
+>>> Would you like to play again? If yes, type y or Y:
 
->>>Have a nice day!
+>>> Have a nice day!
 
 </code></pre>
