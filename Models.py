@@ -1,14 +1,18 @@
 # This is code to run the models
 
 import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+#from tensorflow.keras.layers.experimental import preprocessing
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import numpy as np
 import pandas as pd
 import time
-from keras.models import model_from_json
+from tensorflow.keras.models import model_from_json
 from collections import Counter
 from sklearn.metrics import classification_report
+
 
 def load_model(json_name, h5_name):
     """
@@ -100,3 +104,17 @@ def get_k_splits(train_dsu):
     all_labels = np.array(all_labels)
     print("done")
     return (all_images, all_labels)  # , skf, fold_inds)
+
+
+
+#/Users/Vivian/Documents/GitHub/COVID-19-X-ray-Classifier/Colab Notebooks/covid-chestxray-dataset-master/COVID19_images/
+
+
+if __name__ == "__main__":
+    loaded_model = load_model(
+        "Colab Notebooks//covid-chestxray-dataset-master//COVID19_images//model_P6SMOTEfinal.json",
+        "Colab Notebooks//covid-chestxray-dataset-master//COVID19_images//model_P6SMOTEfinal.h5")
+
+    predict_one_image(loaded_model, "Colab Notebooks//covid-chestxray-dataset-master//COVID19_images//images_directory//bacterial//person1_bacteria_2.jpeg")
+
+
