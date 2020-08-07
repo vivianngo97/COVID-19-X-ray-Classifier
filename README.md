@@ -29,7 +29,7 @@ For the purposes of this project, we used 4,754 images (2,780 bacterial pneumoni
 
 Because the dataaset is small, we leveraged transfer learning to improve model performance. This model uses MobileNetV2. We improved on the pre-trained MobileNetV2 model by adding our own global pooling and prediction layer, as well as experimenting with the hyperparameters to determine the optimal network configuration. 
 
-The final model that we selected is called P6SMOTE (please see our paper for more information) because of its high macro average F1-scores as well as its stable increasing accuracy. This model was trained with a learning rate of 0.0001, 100 epochs, 100 steps per epoch, SMOTE, and class weights of {0: 4, 1: 26, 2: 12}. 
+The final model that we selected is called P6SMOTE (please see our paper [here](https://github.com/vivianngo97/COVID-19-X-ray-Classifier/blob/master/Project_Report.pdf) for more information) because of its high macro average F1-scores as well as its stable increasing accuracy. This model was trained with a learning rate of 0.0001, 100 epochs, 100 steps per epoch, SMOTE, and class weights of {0: 4, 1: 26, 2: 12}. 
 
 # Evaluation 
 
