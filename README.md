@@ -1,7 +1,7 @@
 # COVID and Bacterial Pneumonia Detector
 # Table of Contents  
 - [Overview](#Overview) 
-- [Data Preprocessing](#Data-Preprocessing)  
+- [Data](#Data)  
 - [Model](#Model)  
 - [Evaluation](#Evaluation)  
 - [Test it out!](#Test-it-out)
@@ -17,7 +17,7 @@ In this repo, we train a deep learning model to distinguish between x-ray images
 ![healthy_xray](https://github.com/vivianngo97/COVID-19-X-ray-Classifier/blob/master/fixtures/healthy3.jpeg)
 
 
-# Data  
+# Data
 
 The data used throughout this project was collected from several sources. The first data source is [covid-chestxray-dataset](https://github.com/ieee8023/covid-chestxray-dataset), from which we obtained x-rays and CT scans of roughly 200 patients with COVID-19. This dataset is updated regularly with the approval of the University of Montreal's Ethics Committee.
 
@@ -25,13 +25,13 @@ We also required medical images of healthy individuals and individuals with bact
 
 For the purposes of this project, we used 4,754 images (2,780 bacterial pneumonia, 391 COVID-19, and 1,583 healthy images). This data was split into a 75% training set and 25% testing set.  
 
-# Model 
+# Model
 
 Because the dataaset is small, we leveraged transfer learning to improve model performance. This model uses MobileNetV2. We improved on the pre-trained MobileNetV2 model by adding our own global pooling and prediction layer, as well as experimenting with the hyperparameters to determine the optimal network configuration. 
 
-The final model that we selected is called P6SMOTE (please see our paper for more information) because of its high macro average F1-scores as well as its stable increasing accuracy. This model was trained with a learning rate of 0.0001, 100 epochs, 100 steps per epoch, SMOTE, and class weights of {0: 4, 1: 26, 2: 12}. 
+The final model that we selected is called P6SMOTE (please see our paper [here](https://github.com/vivianngo97/COVID-19-X-ray-Classifier/blob/master/Project_Report.pdf) for more information) because of its high macro average F1-scores as well as its stable increasing accuracy. This model was trained with a learning rate of 0.0001, 100 epochs, 100 steps per epoch, SMOTE, and class weights of {0: 4, 1: 26, 2: 12}. 
 
-# Evaluation 
+# Evaluation
 
 We used the final model to make predictions on the reserved test set, which comprised 25% of our total dataset. The x-rays in the test set were not used in any form during the training and validation process. The precision, recall, F1-score, accuracy and confusion matrix of our model is displayed in the table below. pred_i indicates images that were predicted into class i.
 
