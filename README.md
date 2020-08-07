@@ -28,7 +28,9 @@ The final model that we selected is called P6SMOTE (please see our paper for mor
 
 # Evaluation 
 
-We used the final model to make predictions on the reserved test set, which comprised 25% of our total dataset. The x-rays in the test set were not used in any form during the training and validation process. The precision, recall, F1-score, accuracy and confusion matrix of our model is displayed in the table below. The results are positive, with a macro average precision, recall, and F1-score of 0.972, 0.959, and 0.965 respectively. The confusion matrix also shows that no classes are ignored when making predictions. This informs us that our model appears to be generalizable to new unseen data. Our final accuracy of 96.8\% also outperforms other recent studies that use x-ray imaging to detect COVID-19. 
+We used the final model to make predictions on the reserved test set, which comprised 25% of our total dataset. The x-rays in the test set were not used in any form during the training and validation process. The precision, recall, F1-score, accuracy and confusion matrix of our model is displayed in the table below. pred_i indicates images that were predicted into class i.
+
+The results are positive, with a macro average precision, recall, and F1-score of 0.972, 0.959, and 0.965 respectively. The confusion matrix also shows that no classes are ignored when making predictions. This informs us that our model appears to be generalizable to new unseen data. Our final accuracy of 96.8\% also outperforms other recent studies that use x-ray imaging to detect COVID-19. 
 
 
 |              | precision | recall | f1-score | support | pred_0 | pred_1 | pred_2 |
