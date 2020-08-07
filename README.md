@@ -12,7 +12,9 @@ As of July 2020, the global pandemic COVID-19 has infected over 15 million peopl
 
 In this repo, we train a deep learning model to distinguish between x-ray images of healthy individuals and those with COVID-19 or bacterial pneumonia. To read our blog regarding this project, please visit [https://covidpneumoniaclassifier.wordpress.com/](https://covidpneumoniaclassifier.wordpress.com/). 
 
-![normal_xray](https://github.com/vivianngo97/COVID-19-X-ray-Classifier/blob/master/fixtures/NORMAL2-IM-1440-0001.jpeg)
+![bacterial_xray](https://github.com/vivianngo97/COVID-19-X-ray-Classifier/blob/master/fixtures/bac1.jpeg)
+![covid_xray](https://github.com/vivianngo97/COVID-19-X-ray-Classifier/blob/master/fixtures/covid1.jpg)
+![healthy_xray](https://github.com/vivianngo97/COVID-19-X-ray-Classifier/blob/master/fixtures/NORMAL2-IM-1440-0001.jpeg)
 
 
 # Data  
