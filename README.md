@@ -16,10 +16,9 @@ In this repo, we train a deep learning model to distinguish between x-ray images
 
 # Data Processing 
 
-The data used throughout this project was collected from several sources. The first data source is ~\cite{cohen2020covid}, from which we obtained x-rays and CT scans of roughly 200 patients with COVID-19. This dataset is updated regularly with the approval of the University of Montreal's Ethics Committee.
+The data used throughout this project was collected from several sources. The first data source is [covid-chestxray-dataset](https://github.com/ieee8023/covid-chestxray-dataset), from which we obtained x-rays and CT scans of roughly 200 patients with COVID-19. This dataset is updated regularly with the approval of the University of Montreal's Ethics Committee.
 
-We also required medical images of healthy individuals and individuals with bacterial pneumonia. For this, we utilized a dataset from Kaggle of chest x-ray images for individuals with and without bacterial pneumonia ~\cite{pneumoniadata}. This dataset contains more than 5,000 x-ray images all together.
-
+We also required medical images of healthy individuals and individuals with bacterial pneumonia. For this, we utilized a dataset from Kaggle of chest x-ray images for individuals with and without bacterial pneumonia. This dataset contains more than 5,000 x-ray images all together and can be accessed at [https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia).
 
 # Model 
 
