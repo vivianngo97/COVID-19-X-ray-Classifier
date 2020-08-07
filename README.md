@@ -4,8 +4,6 @@
 - [Data Preprocessing](#Data-Preprocessing)  
 - [Model](#Model)  
 - [Evaluation](#Evaluation)  
-- [Future Considerations](#Future-Considerations)
-- [Examples](#Examples)
 - [Test it out!](#Test-it-out)
 
 # Overview
@@ -42,10 +40,6 @@ We used the final model to make predictions on the reserved test set, which comp
 | macro avg    | 0.972     | 0.959  | 0.965    | 1188    | -      | -      | -      |
 | weighted avg | 0.968     | 0.968  | 0.968    | 1188    | -      | -      | -      |
 
-
-# Future Considerations 
-
-# Examples 
 
 # Test it out
 
